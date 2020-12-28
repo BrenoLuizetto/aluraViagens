@@ -42,16 +42,8 @@ class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,
         
         let pacoteAtual = listaViagens[indexPath.item]
         
-        celulaPacote.labelTitulo?.text = pacoteAtual.viagem.titulo
-        celulaPacote.labelQuantidadeDias?.text = "\(pacoteAtual.viagem.quantidadeDeDias) dias"
-        celulaPacote.labelPreco?.text = "R$\(pacoteAtual.viagem.preco)"
-        celulaPacote.imagemViagem.image = UIImage(named: pacoteAtual.viagem.caminhoDaImagem)
-        
-        celulaPacote.layer.borderWidth = 0.5
-        celulaPacote.layer.borderColor = UIColor(displayP3Red: 85.0/255.0, green: 85.0/255.0, blue: 85.0/255.0, alpha: 1).cgColor
-        celulaPacote.layer.cornerRadius = 8
-        
-        
+        celulaPacote.configuraCelula(pacoteViagem: pacoteAtual)
+ 
         return celulaPacote
 
     }
@@ -61,9 +53,8 @@ class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = .zero
         }
-        
-        let larguraCelula = collectionView.bounds.width / 2
-        return CGSize(width: larguraCelula - 15, height: 260)
+
+        return UIDevice.current.userInterfaceIdiom == .phone ? CGSize(width: collectionView.bounds.width/2-20, height: 160) : CGSize(width: collectionView.bounds.width/3-20, height: 250)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -78,16 +69,9 @@ class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         listaViagens = listaComTodasViagens
-        if searchText != ""{
-            let filtroListaViagem = NSPredicate(format: "titulo contains %@", searchText)
-            
-            let listaFiltrada: Array<PacoteViagem> = (listaViagens as NSArray).filtered(using: filtroListaViagem) as! Array
-            
-            listaViagens = listaFiltrada
-            
-        
+        if searchText != "" {
+            listaViagens = listaViagens.filter({ $0.viagem.titulo.contains(searchText) })
         }
-        self.labelContadorPacotes.text = self.atualizaContadorLabel()
         colecaoPacotesViagem.reloadData()
     }
     

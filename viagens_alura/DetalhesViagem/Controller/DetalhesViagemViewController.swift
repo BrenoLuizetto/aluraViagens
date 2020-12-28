@@ -66,8 +66,9 @@ class DetalhesViagemViewController: UIViewController {
     }
     
     @IBAction func botaoVoltar(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-
+        if let navigation = navigationController{
+        self.navigationController?.popViewController(animated: true)
+        }
     }
 
 }

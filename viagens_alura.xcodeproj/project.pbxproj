@@ -99,8 +99,8 @@
 		F1461CCE2593B6E600FA2A96 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F1461CCB2593ADAE00FA2A96 /* TableViewCell.swift */,
-				F1461CAA2593A21F00FA2A96 /* ViewController.swift */,
+				F17203A4259A67FC00FF1780 /* View */,
+				F17203A3259A67EF00FF1780 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -177,6 +177,22 @@
 				F17203A1259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F17203A3259A67EF00FF1780 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1461CAA2593A21F00FA2A96 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F17203A4259A67FC00FF1780 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1461CCB2593ADAE00FA2A96 /* TableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
