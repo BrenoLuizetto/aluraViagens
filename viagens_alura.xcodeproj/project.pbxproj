@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				F1461CD12593CB4E00FA2A96 /* Controller */,
-				F1461CD22593CB5600FA2A96 /* View */,
 			);
 			path = Pacotes;
 			sourceTree = "<group>";
@@ -115,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				F1461CD32593CB8000FA2A96 /* PacotesViagemViewController.swift */,
+				F1461CD22593CB5600FA2A96 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
