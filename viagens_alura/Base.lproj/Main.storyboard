@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nNT-Kg-goN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fYR-xe-G54">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -199,7 +199,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Procurar" id="nOd-2z-rtW"/>
+                    <tabBarItem key="tabBarItem" title="Procurar" image="icon_search" id="nOd-2z-rtW"/>
                     <connections>
                         <outlet property="tabelaViagens" destination="VMy-Wo-1Mv" id="6nJ-kH-EAP"/>
                         <outlet property="viewHoteis" destination="IZw-Dt-BoU" id="MWk-2y-e1T"/>
@@ -214,6 +214,7 @@
         <scene sceneID="1dN-MK-22m">
             <objects>
                 <tabBarController id="nNT-Kg-goN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="VMg-4Y-prD"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7iW-Gq-7i7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -248,12 +249,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TsS-c7-Z89">
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="TsS-c7-Z89">
                                         <rect key="frame" x="0.0" y="33" width="290" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="T3A-FS-4xc"/>
                                         </constraints>
-                                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 pacotes encontrados" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9b-oD-Vze">
@@ -343,7 +344,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gxb-tX-h3k"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pacotes" id="FtZ-qr-kkk"/>
+                    <tabBarItem key="tabBarItem" title="Pacotes" image="icon_package" id="FtZ-qr-kkk"/>
                     <connections>
                         <outlet property="colecaoPacotesViagem" destination="tiC-WT-iWR" id="6B9-Ge-eRr"/>
                         <outlet property="labelContadorPacotes" destination="c9b-oD-Vze" id="5lK-LY-Kwa"/>
@@ -628,15 +629,31 @@
             </objects>
             <point key="canvasLocation" x="1863.75" y="130.98591549295776"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s1r-Ys-c9a">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="fYR-xe-G54" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4QL-De-s8B">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nNT-Kg-goN" kind="relationship" relationship="rootViewController" id="utj-4e-4FF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yao-xm-9Ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1464" y="132"/>
+        </scene>
         <!--Confirmacao Pagamento View Controller-->
         <scene sceneID="SA1-kS-834">
             <objects>
                 <viewController storyboardIdentifier="compraRealizada" id="FvG-91-KaG" customClass="ConfirmacaoPagamentoViewController" customModule="viagens_alura" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Qrt-4M-3dD">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Qrt-4M-3dD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-HY-fb9">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k4a-HY-fb9">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compra realizada com sucesso!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouc-Pc-q8j">
@@ -661,8 +678,8 @@
                                     <constraint firstItem="8dW-Lp-VJM" firstAttribute="top" secondItem="k4a-HY-fb9" secondAttribute="top" constant="30" id="kWx-yu-3sv"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-fF-AuC">
-                                <rect key="frame" x="10" y="138" width="300" height="350"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nnW-fF-AuC">
+                                <rect key="frame" x="10" y="138" width="300" height="354.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confira o resumo da compra" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7e-LB-0Yz">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="23.5"/>
@@ -680,44 +697,59 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PORTO DE GALINHAS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UWV-fa-zc4">
-                                        <rect key="frame" x="0.0" y="163.5" width="300" height="31.5"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EBJ-X6-7pF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="23"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kq1-eK-PI3">
-                                        <rect key="frame" x="0.0" y="200" width="300" height="1"/>
+                                        <rect key="frame" x="0.0" y="198.5" width="300" height="1"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="4QF-32-yVb"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resort Porto de Galinhas" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9m-JN-R52">
-                                        <rect key="frame" x="0.0" y="206" width="300" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="204.5" width="300" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="Ovz-iy-B8s"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 ~ 15 de Agosto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S01-iF-jB7">
-                                        <rect key="frame" x="0.0" y="234.5" width="300" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="234.5" width="300" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="peJ-bT-eeE"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 adultos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oW-ls-KQ7">
-                                        <rect key="frame" x="0.0" y="263" width="300" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="264.5" width="300" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="FZl-1h-hg2"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hotel + Café da Manhã" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECL-0o-Ouj">
-                                        <rect key="frame" x="0.0" y="291.5" width="300" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="294.5" width="300" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="clI-bV-7Md"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
                                         <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrQ-My-79E">
-                                        <rect key="frame" x="0.0" y="320" width="300" height="30"/>
+                                        <rect key="frame" x="0.0" y="324.5" width="300" height="30"/>
                                         <color key="backgroundColor" red="0.2196078431372549" green="0.71372549019607845" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="DSl-E5-kgk"/>
@@ -725,6 +757,9 @@
                                         <state key="normal" title="Voltar para home">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="botaoVoltarHome:" destination="FvG-91-KaG" eventType="touchUpInside" id="ndM-wN-PNg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -744,6 +779,7 @@
                     </view>
                     <connections>
                         <outlet property="ImagemPacoteViagem" destination="NUr-o6-Flh" id="sFu-bJ-x9w"/>
+                        <outlet property="botaoVoltarHome" destination="vrQ-My-79E" id="TIT-nj-r5f"/>
                         <outlet property="labelDataPacoteViagem" destination="S01-iF-jB7" id="SkC-r3-BOl"/>
                         <outlet property="labelDescricaoPacoteViagem" destination="ECL-0o-Ouj" id="9wU-K7-jbx"/>
                         <outlet property="labelHotelPacoteViagem" destination="T9m-JN-R52" id="V7P-fS-T6W"/>
@@ -761,6 +797,8 @@
         <image name="icon_back" width="50" height="50"/>
         <image name="icon_breakfast" width="50" height="50"/>
         <image name="icon_hotel" width="50" height="50"/>
+        <image name="icon_package" width="25" height="25"/>
+        <image name="icon_search" width="25" height="25"/>
         <image name="img2" width="640" height="426"/>
     </resources>
 </document>

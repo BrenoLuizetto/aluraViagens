@@ -72,7 +72,8 @@ class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,
         let controller = storyboard.instantiateViewController(withIdentifier: "DetalhesViagem") as! DetalhesViagemViewController
         
         controller.pacoteSelecionado = pacote
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller,animated: true)
+
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

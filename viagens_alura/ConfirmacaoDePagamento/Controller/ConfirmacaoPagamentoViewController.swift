@@ -17,6 +17,7 @@ class ConfirmacaoPagamentoViewController: UIViewController {
     @IBOutlet weak var labelQuantidadePessoas: UILabel!
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
     
+    @IBOutlet weak var botaoVoltarHome: UIButton!
     
     var pacoteComprado:PacoteViagem? = nil
     
@@ -24,10 +25,17 @@ class ConfirmacaoPagamentoViewController: UIViewController {
         super.viewDidLoad()
         
         if let pacote = pacoteComprado{
-            print(pacote.viagem.titulo)
+            self.ImagemPacoteViagem.image = UIImage(named: pacote.viagem.caminhoDaImagem)
+            self.labelHotelPacoteViagem.text = pacote.nomeDoHotel
+            self.labelTituloPacoteViagem.text = pacote.viagem.titulo.uppercased()
+            self.labelDataPacoteViagem.text = pacote.dataViagem
+            self.labelDescricaoPacoteViagem.text = pacote.descricao
+            
+            self.ImagemPacoteViagem.layer.cornerRadius = 10
+            self.ImagemPacoteViagem.layer.masksToBounds = true
+            
+            self.botaoVoltarHome.layer.cornerRadius = 8
         }
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -41,4 +49,9 @@ class ConfirmacaoPagamentoViewController: UIViewController {
     }
     */
 
+    @IBAction func botaoVoltarHome(_ sender: UIButton) {
+        if let navigation = self.navigationController{
+            navigation.popToRootViewController(animated: true)
+        }
+    }
 }
