@@ -69,7 +69,6 @@
 				F1461CCF2593B71100FA2A96 /* ViagemDAO */,
 				F1461CCE2593B6E600FA2A96 /* Home */,
 				F1461CCD2593B6DB00FA2A96 /* Model */,
-				F1461CBC2593AC9F00FA2A96 /* ViagemDAO.swift */,
 				F1461CD02593CB2B00FA2A96 /* Pacotes */,
 				F1461CAF2593A22000FA2A96 /* Assets.xcassets */,
 				F1461CB12593A22000FA2A96 /* LaunchScreen.storyboard */,
@@ -81,6 +80,7 @@
 		F1461CCD2593B6DB00FA2A96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F1461CBA2593ABA000FA2A96 /* Viagem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 		F1461CCF2593B71100FA2A96 /* ViagemDAO */ = {
 			isa = PBXGroup;
 			children = (
-				F1461CBA2593ABA000FA2A96 /* Viagem.swift */,
+				F1461CBC2593AC9F00FA2A96 /* ViagemDAO.swift */,
 			);
 			path = ViagemDAO;
 			sourceTree = "<group>";
