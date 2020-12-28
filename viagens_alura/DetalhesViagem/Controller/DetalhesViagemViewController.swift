@@ -16,6 +16,7 @@ class DetalhesViagemViewController: UIViewController {
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var labelPrecoPacoteViagem: UILabel!
     @IBOutlet weak var scrollPrincipal: UIScrollView!
+    @IBOutlet weak var textFieldData: UITextField!
     
     var pacoteSelecionado: PacoteViagem? = nil
     
@@ -39,10 +40,34 @@ class DetalhesViagemViewController: UIViewController {
     @objc func aumentarScroll(notification:Notification){
         self.scrollPrincipal.contentSize = CGSize(width: self.scrollPrincipal.frame.width, height: self.scrollPrincipal.frame.height + 320)
     }
-
+    
+    @objc func exibeDataTextField(sender: UIDatePicker){
+        let formatador = DateFormatter()
+        formatador.dateFormat = "dd MM yyyy"
+        self.textFieldData.text = formatador.string(from: sender.date)
+    }
+    
+    
+    
+    @IBAction func botaoFinalizarCompra(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "compraRealizada") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.present(controller, animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
+        let datePickerView = UIDatePicker()
+        datePickerView.datePickerMode = .date
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+    }
     
     @IBAction func botaoVoltar(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
 
     }
+
 }

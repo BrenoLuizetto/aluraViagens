@@ -20,6 +20,7 @@
 		F1720399259A226E00FF1780 /* DetalhesViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1720398259A226E00FF1780 /* DetalhesViagemViewController.swift */; };
 		F172039B259A27F600FF1780 /* PacoteViagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172039A259A27F600FF1780 /* PacoteViagem.swift */; };
 		F172039D259A294100FF1780 /* PacoteViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F172039C259A294100FF1780 /* PacoteViagemDAO.swift */; };
+		F17203A2259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17203A1259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F1720398259A226E00FF1780 /* DetalhesViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagemViewController.swift; sourceTree = "<group>"; };
 		F172039A259A27F600FF1780 /* PacoteViagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagem.swift; sourceTree = "<group>"; };
 		F172039C259A294100FF1780 /* PacoteViagemDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PacoteViagemDAO.swift; path = "../../../../Downloads/Alura-Viagens-parte2-master/Alura Viagens/PacoteViagemDAO.swift"; sourceTree = "<group>"; };
+		F17203A1259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmacaoPagamentoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				F1461CCD2593B6DB00FA2A96 /* Model */,
 				F1461CD02593CB2B00FA2A96 /* Pacotes */,
 				F1720395259A21F200FF1780 /* DetalhesViagem */,
+				F172039E259A5AA800FF1780 /* ConfirmacaoDePagamento */,
 				F1461CAF2593A22000FA2A96 /* Assets.xcassets */,
 				F1461CB12593A22000FA2A96 /* LaunchScreen.storyboard */,
 				F1461CB42593A22000FA2A96 /* Info.plist */,
@@ -160,6 +163,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F172039E259A5AA800FF1780 /* ConfirmacaoDePagamento */ = {
+			isa = PBXGroup;
+			children = (
+				F17203A0259A5AF400FF1780 /* Controller */,
+			);
+			path = ConfirmacaoDePagamento;
+			sourceTree = "<group>";
+		};
+		F17203A0259A5AF400FF1780 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F17203A1259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -238,6 +257,7 @@
 				F1461CD42593CB8000FA2A96 /* PacotesViagemViewController.swift in Sources */,
 				F172039D259A294100FF1780 /* PacoteViagemDAO.swift in Sources */,
 				F1461CA92593A21F00FA2A96 /* AppDelegate.swift in Sources */,
+				F17203A2259A5B1600FF1780 /* ConfirmacaoPagamentoViewController.swift in Sources */,
 				F1461CD62593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift in Sources */,
 				F1461CBD2593AC9F00FA2A96 /* ViagemDAO.swift in Sources */,
 				F172039B259A27F600FF1780 /* PacoteViagem.swift in Sources */,
