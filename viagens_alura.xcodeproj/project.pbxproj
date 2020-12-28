@@ -17,6 +17,7 @@
 		F1461CCC2593ADAE00FA2A96 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1461CCB2593ADAE00FA2A96 /* TableViewCell.swift */; };
 		F1461CD42593CB8000FA2A96 /* PacotesViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1461CD32593CB8000FA2A96 /* PacotesViagemViewController.swift */; };
 		F1461CD62593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1461CD52593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift */; };
+		F1720399259A226E00FF1780 /* DetalhesViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1720398259A226E00FF1780 /* DetalhesViagemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F1461CCB2593ADAE00FA2A96 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F1461CD32593CB8000FA2A96 /* PacotesViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacotesViagemViewController.swift; sourceTree = "<group>"; };
 		F1461CD52593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacoteViagemCollectionViewCell.swift; sourceTree = "<group>"; };
+		F1720398259A226E00FF1780 /* DetalhesViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViagemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				F1461CCE2593B6E600FA2A96 /* Home */,
 				F1461CCD2593B6DB00FA2A96 /* Model */,
 				F1461CD02593CB2B00FA2A96 /* Pacotes */,
+				F1720395259A21F200FF1780 /* DetalhesViagem */,
 				F1461CAF2593A22000FA2A96 /* Assets.xcassets */,
 				F1461CB12593A22000FA2A96 /* LaunchScreen.storyboard */,
 				F1461CB42593A22000FA2A96 /* Info.plist */,
@@ -105,6 +108,7 @@
 		F1461CD02593CB2B00FA2A96 /* Pacotes */ = {
 			isa = PBXGroup;
 			children = (
+				F1461CD22593CB5600FA2A96 /* View */,
 				F1461CD12593CB4E00FA2A96 /* Controller */,
 			);
 			path = Pacotes;
@@ -114,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				F1461CD32593CB8000FA2A96 /* PacotesViagemViewController.swift */,
-				F1461CD22593CB5600FA2A96 /* View */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +126,30 @@
 			isa = PBXGroup;
 			children = (
 				F1461CD52593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1720395259A21F200FF1780 /* DetalhesViagem */ = {
+			isa = PBXGroup;
+			children = (
+				F1720397259A224000FF1780 /* View */,
+				F1720396259A223100FF1780 /* Controller */,
+			);
+			path = DetalhesViagem;
+			sourceTree = "<group>";
+		};
+		F1720396259A223100FF1780 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1720398259A226E00FF1780 /* DetalhesViagemViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F1720397259A224000FF1780 /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +228,7 @@
 				F1461CCC2593ADAE00FA2A96 /* TableViewCell.swift in Sources */,
 				F1461CAB2593A21F00FA2A96 /* ViewController.swift in Sources */,
 				F1461CBB2593ABA000FA2A96 /* Viagem.swift in Sources */,
+				F1720399259A226E00FF1780 /* DetalhesViagemViewController.swift in Sources */,
 				F1461CD42593CB8000FA2A96 /* PacotesViagemViewController.swift in Sources */,
 				F1461CA92593A21F00FA2A96 /* AppDelegate.swift in Sources */,
 				F1461CD62593CC9E00FA2A96 /* PacoteViagemCollectionViewCell.swift in Sources */,

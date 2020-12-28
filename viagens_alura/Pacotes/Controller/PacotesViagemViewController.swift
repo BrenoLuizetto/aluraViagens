@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout, UISearchBarDelegate, UICollectionViewDelegate {
  
     
     @IBOutlet weak var colecaoPacotesViagem: UICollectionView!
@@ -64,6 +64,13 @@ class PacotesViagemViewController: UIViewController, UICollectionViewDataSource,
         
         let larguraCelula = collectionView.bounds.width / 2
         return CGSize(width: larguraCelula - 15, height: 260)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard =  UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "DetalhesViagem") as! DetalhesViagemViewController
+        
+        self.present(controller, animated: true, completion: nil)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
